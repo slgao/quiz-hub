@@ -504,9 +504,10 @@
   <h1>40 Questions<br><span>Study Guide</span></h1>
   <p class="hero-sub">Complete answers, deep explanations, and curated learning materials to master everything from overfitting to transformers.</p>
   <div class="nav-pills">
-    <a href="#questions" class="nav-pill">📋 All Questions</a>
-    <a href="#learning" class="nav-pill">📚 Learning Material</a>
-    <a href="#books" class="nav-pill">📖 Books & Resources</a>
+    <a href="#questions" class="nav-pill">All Questions</a>
+    <a href="#learning" class="nav-pill">Learning Material</a>
+    <a href="#books" class="nav-pill">Books & Resources</a>
+    <a href="#analysis" class="nav-pill">Role Analysis</a>
   </div>
 </div>
 
@@ -1548,7 +1549,7 @@ x_adv = x + ε · sign(∇ₓ L(f(x), y))</div>
     </div>
 
     <div class="topic-card">
-      <div class="topic-title">🔥 Overfitting, Underfitting & Regularization</div>
+      <div class="topic-title">Overfitting, Underfitting & Regularization</div>
       <div class="topic-body">
         <p>The bias-variance tradeoff is the central challenge of ML. Understanding it explains half of all training decisions.</p>
         <ul>
@@ -1569,7 +1570,7 @@ x_adv = x + ε · sign(∇ₓ L(f(x), y))</div>
     </div>
 
     <div class="topic-card green">
-      <div class="topic-title">🧠 Neural Network Fundamentals</div>
+      <div class="topic-title">Neural Network Fundamentals</div>
       <div class="topic-body">
         <p>Core building blocks every practitioner must internalize.</p>
         <ul>
@@ -1591,7 +1592,7 @@ x_adv = x + ε · sign(∇ₓ L(f(x), y))</div>
     </div>
 
     <div class="topic-card red">
-      <div class="topic-title">🏗️ Convolutional Neural Networks</div>
+      <div class="topic-title">Convolutional Neural Networks</div>
       <div class="topic-body">
         <ul>
           <li><strong>Output size formula:</strong> ⌊(W - K + 2P) / S⌋ + 1, where W=input, K=kernel, P=padding, S=stride.</li>
@@ -1613,7 +1614,7 @@ Receptive field: 1 + N*(K-1) for N stride-1 K×K convs</div>
     </div>
 
     <div class="topic-card">
-      <div class="topic-title">⚡ Optimizers & Training Dynamics</div>
+      <div class="topic-title">Optimizers & Training Dynamics</div>
       <div class="topic-body">
         <ul>
           <li><strong>SGD:</strong> w ← w - α·∇L. Simple, needs tuning. Works well with momentum.</li>
@@ -1635,7 +1636,7 @@ Receptive field: 1 + N*(K-1) for N stride-1 K×K convs</div>
     </div>
 
     <div class="topic-card green">
-      <div class="topic-title">🤖 Transformers & Attention</div>
+      <div class="topic-title">Transformers & Attention</div>
       <div class="topic-body">
         <ul>
           <li><strong>Scaled Dot-Product Attention:</strong> Attention(Q,K,V) = softmax(QKᵀ/√d_k)·V</li>
@@ -1660,7 +1661,7 @@ Scaling keeps variance ≈ 1 regardless of d_k</div>
     </div>
 
     <div class="topic-card red">
-      <div class="topic-title">📊 Probabilistic ML & Bayesian Methods</div>
+      <div class="topic-title">Probabilistic ML & Bayesian Methods</div>
       <div class="topic-body">
         <ul>
           <li><strong>Generative vs Discriminative:</strong> Generative (Naive Bayes, GMMs) models P(X,y); discriminative (logistic regression, SVMs) models P(y|X) directly.</li>
@@ -1680,7 +1681,7 @@ Scaling keeps variance ≈ 1 regardless of d_k</div>
     </div>
 
     <div class="topic-card">
-      <div class="topic-title">🔁 Recurrent Networks & LSTMs</div>
+      <div class="topic-title">Recurrent Networks & LSTMs</div>
       <div class="topic-body">
         <ul>
           <li><strong>Vanilla RNN:</strong> hₜ = tanh(Wₕhₜ₋₁ + Wₓxₜ + b). Suffers vanishing/exploding gradients over long sequences. Bad at long-term dependencies.</li>
@@ -1704,7 +1705,7 @@ Scaling keeps variance ≈ 1 regardless of d_k</div>
     </div>
 
     <div class="topic-card green">
-      <div class="topic-title">🛡️ Adversarial ML & Model Evaluation</div>
+      <div class="topic-title">Adversarial ML & Model Evaluation</div>
       <div class="topic-body">
         <ul>
           <li><strong>FGSM:</strong> x_adv = x + ε·sign(∇ₓL). Minimal perturbation, maximal loss increase. Invented by Goodfellow et al. 2014.</li>
@@ -1724,7 +1725,7 @@ Scaling keeps variance ≈ 1 regardless of d_k</div>
     </div>
 
     <div class="topic-card red">
-      <div class="topic-title">🐍 NumPy & Python Fundamentals</div>
+      <div class="topic-title">NumPy & Python Fundamentals</div>
       <div class="topic-body">
         <ul>
           <li><strong>Why NumPy is fast:</strong> Vectorized C operations (no Python loop overhead), BLAS/LAPACK for linear algebra, optional SIMD/multi-core parallelism.</li>
@@ -1849,6 +1850,179 @@ Scaling keeps variance ≈ 1 regardless of d_k</div>
       </div>
 
     </div>
+  </div>
+
+  <!-- ==================== ROLE ANALYSIS ==================== -->
+  <div id="analysis">
+    <div class="section-header">
+      <span class="section-num">04 — ANALYSIS</span>
+      <h2>Role Analysis & Preparation Guide</h2>
+    </div>
+
+    <!-- TIME CONSTRAINT -->
+    <div class="topic-card red">
+      <div class="topic-title">40 Questions · 40 Minutes — What It Really Means</div>
+      <div class="topic-body">
+        <p>60 seconds per question — with image interpretation, multi-select reasoning, and on-the-spot calculation all mixed in. The time constraint is not incidental: <strong>it is the test</strong>. You cannot derive your way through this; knowledge must be automatic.</p>
+        <p>A prepared candidate clears recall questions in ~15 min and uses the remaining 25 min for calculation and image-based questions.</p>
+        <table>
+          <tr><th>Tier</th><th>Budget</th><th>~Share</th><th>Representative Questions</th></tr>
+          <tr>
+            <td><span style="color:#a0ffcc;font-weight:500">Fast Recall</span></td>
+            <td style="font-family:'IBM Plex Mono',monospace;font-size:0.82rem">≤ 30s</td>
+            <td style="font-family:'IBM Plex Mono',monospace;font-size:0.82rem">~40%</td>
+            <td style="font-family:'IBM Plex Mono',monospace;font-size:0.8rem;color:#a0a0c0">Q4, Q21, Q22, Q24, Q26, Q28, Q29, Q32, Q35, Q40</td>
+          </tr>
+          <tr>
+            <td><span style="color:#c0b0ff;font-weight:500">Reasoning</span></td>
+            <td style="font-family:'IBM Plex Mono',monospace;font-size:0.82rem">~60s</td>
+            <td style="font-family:'IBM Plex Mono',monospace;font-size:0.82rem">~40%</td>
+            <td style="font-family:'IBM Plex Mono',monospace;font-size:0.8rem;color:#a0a0c0">Q2, Q3, Q5, Q8, Q9, Q12, Q17, Q18, Q19, Q20, Q27, Q34, Q36–39</td>
+          </tr>
+          <tr>
+            <td><span style="color:#ffaaaa;font-weight:500">Calculation / Hard</span></td>
+            <td style="font-family:'IBM Plex Mono',monospace;font-size:0.82rem">~90s+</td>
+            <td style="font-family:'IBM Plex Mono',monospace;font-size:0.82rem">~20%</td>
+            <td style="font-family:'IBM Plex Mono',monospace;font-size:0.8rem;color:#a0a0c0">Q1, Q7, Q10, Q11, Q13–14, Q15, Q16, Q23, Q31, Q33</td>
+          </tr>
+        </table>
+        <div class="formula-box">Exam strategy:
+1. Sweep all recall questions first — build a time buffer early
+2. Flag calculation questions, return at the end
+3. Multi-selects carry the most risk — don't half-guess
+4. Image questions (Q1, Q11, Q31, Q33) take priority over pure arithmetic</div>
+        <div class="topic-tags">
+          <span class="key-concept">40 min</span>
+          <span class="key-concept">~60s/question</span>
+          <span class="key-concept">multi-select</span>
+          <span class="key-concept">image interpretation</span>
+          <span class="key-concept">no time to derive</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENGINEER PROFILE -->
+    <div class="topic-card">
+      <div class="topic-title">Who They're Looking For</div>
+      <div class="topic-body">
+        <p>A <strong>broad, fast, production-aware ML practitioner — not a researcher.</strong> Five signals from the question design:</p>
+        <ul>
+          <li>
+            <strong>Diagnostic fluency over derivation ability.</strong>
+            Q1 and Q11 ask you to read a loss curve and name the problem instantly. This skill only comes from having actually debugged models. They are not testing whether you can derive backprop — they are testing whether you'd be useful on a Monday morning when something is broken.
+          </li>
+          <li>
+            <strong>Wide breadth, not deep specialisation.</strong>
+            The quiz spans CNNs, transformers, probabilistic ML, RNNs, GANs, VC theory, Python internals, adversarial ML, and distributed training — all in 40 questions. No area is probed deeply. This is a generalist ML engineer profile, not an NLP researcher or CV specialist.
+          </li>
+          <li>
+            <strong>Current awareness.</strong>
+            Q17 (attention scaling, 2017) and Q34 (sparse MoE / Mixtral, 2023) expect you to track recent architecture developments, not just classics.
+          </li>
+          <li>
+            <strong>Engineering pragmatism.</strong>
+            Q8 (NaN loss → reduce LR), Q19 (dying ReLU fixes), Q23 (conv output formula), Q28 (GPU parallelism) are all things that come up in real jobs. They want someone who can ship, debug, and explain decisions to a team.
+          </li>
+          <li>
+            <strong>Probabilistic and statistical thinking.</strong>
+            Q6 (VI vs MCMC), Q7 (conditional probability), Q29 (EM), Q30 (VC dimension) show they care about statistical foundations — critical in an applied ML consultancy reasoning about uncertainty across many client domains.
+          </li>
+        </ul>
+        <div class="topic-tags">
+          <span class="key-concept">production ML</span>
+          <span class="key-concept">generalist</span>
+          <span class="key-concept">fast debugger</span>
+          <span class="key-concept">research-aware</span>
+          <span class="key-concept">probabilistic thinker</span>
+          <span class="key-concept">T-shaped</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREPARATION GUIDE -->
+    <div class="topic-card green">
+      <div class="topic-title">How to Prepare</div>
+      <div class="topic-body">
+        <p><strong>Build reflex-level fluency, not surface familiarity.</strong> The 60s/question budget means these must be instant — no looking up, no re-deriving:</p>
+        <table>
+          <tr><th>Topic</th><th>What to have memorised</th></tr>
+          <tr>
+            <td>Conv output size</td>
+            <td><span class="math">⌊(W − K + 2P) / S⌋ + 1</span> — compute in your head for small inputs</td>
+          </tr>
+          <tr>
+            <td>Softmax sanity check</td>
+            <td>Initial loss = <span class="math">ln(C)</span>, initial accuracy = <span class="math">1/C</span> — verify at the start of any run</td>
+          </tr>
+          <tr>
+            <td>3×3 vs 7×7 convs</td>
+            <td>Same receptive field; <span class="math">3 × 3×3 = 27C²</span> params vs <span class="math">49C²</span> — 45% cheaper, 3× non-linearities</td>
+          </tr>
+          <tr>
+            <td>Attention scaling</td>
+            <td>Dot products grow with d_k → softmax saturates → divide by <span class="math">√d_k</span> to normalise variance to 1</td>
+          </tr>
+          <tr>
+            <td>Loss curve patterns</td>
+            <td>Train↓ Test→ = overfit · both low = underfit · flat then drop = LR too low · NaN = LR too high</td>
+          </tr>
+          <tr>
+            <td>GD convergence</td>
+            <td><span class="math">α · f'' &lt; 2</span> for quadratics — LR=4 diverges when f''=0.5</td>
+          </tr>
+          <tr>
+            <td>Activations at x=2</td>
+            <td>ReLU = 2 · ELU = 2 · tanh ≈ 0.96 · sigmoid ≈ 0.88</td>
+          </tr>
+        </table>
+
+        <p style="margin-top:1.2rem"><strong>Study to understanding on multi-select topics.</strong> The multi-select questions penalise half-knowledge — you need to know not just the correct answers but why the wrong options are wrong:</p>
+        <ul>
+          <li><strong>Generative vs discriminative:</strong> Naive Bayes models P(X|y) and requires the full joint; logistic regression models P(y|X) directly — subtle but testable</li>
+          <li><strong>VI vs MCMC:</strong> Variational inference is biased but tractable (optimisation); MCMC is asymptotically exact but hard to tune (sampling)</li>
+          <li><strong>Regularisation vs optimisation:</strong> RMSprop is an optimizer — it adapts learning rates, does not penalise model complexity</li>
+          <li><strong>ROC vs PR curves:</strong> ROC is invariant to class imbalance; PR degrades when negatives dominate — know which to use and why</li>
+          <li><strong>LSTM vs GRU:</strong> LSTM has independent forget/input/output gates; GRU couples them (update = 1 − reset). Both are types of RNN</li>
+        </ul>
+
+        <p style="margin-top:1.2rem"><strong>Resources that map directly to this quiz:</strong></p>
+        <table>
+          <tr><th>Resource</th><th>Directly covers</th></tr>
+          <tr>
+            <td>CS231n · Stanford</td>
+            <td>Conv arithmetic, loss curves, backprop, optimizers → Q1, Q11, Q13–14, Q16, Q23, Q31</td>
+          </tr>
+          <tr>
+            <td>Karpathy · Neural Networks: Zero to Hero</td>
+            <td>Backprop intuition, loss curves, RNNs, LSTMs built from scratch → Q1, Q8, Q10, Q19, Q33, Q37</td>
+          </tr>
+          <tr>
+            <td>Goodfellow et al. · Deep Learning</td>
+            <td>Regularisation, optimizers, GANs, adversarial examples → Q1, Q18, Q19, Q36, Q38</td>
+          </tr>
+          <tr>
+            <td>Bishop · PRML Ch. 8–10</td>
+            <td>Graphical models, EM, variational inference, VC theory → Q6, Q29, Q30</td>
+          </tr>
+          <tr>
+            <td>Vaswani et al. · Attention Is All You Need</td>
+            <td>Scaled dot-product attention, the √d_k scaling → Q17</td>
+          </tr>
+          <tr>
+            <td>Shazeer et al. · Outrageously Large Neural Networks</td>
+            <td>Sparse mixture of experts, gating / router → Q34</td>
+          </tr>
+        </table>
+        <div class="topic-tags">
+          <span class="key-concept">reflexive recall</span>
+          <span class="key-concept">breadth-first</span>
+          <span class="key-concept">diagram reading</span>
+          <span class="key-concept">multi-select fluency</span>
+          <span class="key-concept">timed practice</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 </div>
